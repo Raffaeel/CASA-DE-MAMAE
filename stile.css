@@ -1,0 +1,243 @@
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+    background-color: rgb(248, 245, 246); /* rosa claro */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+    height: 90px;
+    margin-top: 20px;
+    overflow: hidden; /* Evita estouros horizontais */
+}
+
+.logo {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.letreiro {
+    display: flex;
+    justify-content: space-between;
+    font-size: 28px;
+    font-weight: bold;
+    color: #C71585;
+    max-width: 44%;
+    text-align: center;
+}
+
+.logodomain {
+    position: absolute;
+    right: 0;
+    width: 75%;
+    max-width: 680px;
+    height: 680px;
+    top: 180px;
+    background-color: transparent;
+    margin-right: 0;
+    padding-right: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+body {
+    background-color: rgb(248, 246, 248);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+.frase-container {
+  display: flex;
+    justify-content: center;   /* Centraliza horizontalmente */
+    align-items: center;       /* Centraliza verticalmente */
+    flex: 1;                   /* Ocupa o espaço restante */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+main button {
+    border-radius: 15px;
+    background-color: #e0b3ff;
+    color: white;
+    padding: 30px 60px;
+    border: none;
+    cursor: pointer;
+    margin: 30px 0;
+    font-family: 'Arial', sans-serif;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main button:hover {
+    transform: scale(1.05);
+}
+
+main .bt2 {
+    width: 650px;
+    height: 45px;
+}
+
+main .bt3 {
+    width: 500px;
+    height: 40px;
+}
+
+main .bt4 {
+    width: 350px;
+    height: 40px;
+}
+
+main .bt6 {
+    width: 250px;
+    height: 40px;
+}
+
+main button a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: inherit;
+    font-family: 'Arial', sans-serif;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 20px 60px;
+    margin-top: 70px;
+    margin-left: -20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+footer button {
+    border-radius: 15px;
+    background-color: #e0b3ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+footer button:hover {
+    transform: scale(1.05);
+}
+
+footer .bt1 {
+    width: 425px;
+}
+
+footer .bt5 {
+    width: 240px;
+}
+
+footer .bt-fino {
+    width: 200px;
+    height: 40px;
+}
+
+footer button a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: inherit;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+/* RESPONSIVO CELULAR E TABLET */
+
+@media (max-width: 1024px) {
+
+    /* Ajusta os botões e conteúdo para caber no tablet e celular */
+    main {
+        align-items: center;
+        margin-left: 0;
+    }
+
+    main .bt2,
+    main .bt3,
+    main .bt4,
+    main .bt6 {
+        width: 90%;
+        max-width: 300px;
+        height: 50px;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .letreiro {
+        font-size: 24px;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .logodomain {
+        position: absolute;
+        top: 150px;
+        right: 50px;
+        left:-105px;
+        margin: 70px;
+        width: 550px;
+        height: 550px;
+    
+        z-index: -1;
+        opacity: 0.2;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    footer button {
+        width: 90%;
+        max-width: 300px;
+    }
+}

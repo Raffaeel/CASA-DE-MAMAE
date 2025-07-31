@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salgados</title>
+    <style>
+body {
+    background-color: rgb(248, 247, 250);
+}
+
+.salgado-container {
+    display: flex; /* Alinhamento horizontal */
+    gap: 50px; /* Espaço entre os itens */
+    justify-content: center;
+    padding: 3%;
+}
+
+.salgado-item {
+    text-align: center;
+}
+
+.salgado-item img {
+    width: 190px;
+    height: 190px;
+    border: 3px solid black;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.salgadoA-container {
+    display: flex; /* Alinhamento horizontal */
+    gap: 50px; /* Espaço entre os itens */
+    justify-content: center;
+    padding: 3%;
+}
+
+.salgadosAssados-item {
+    text-align: center;
+}
+
+.salgadosAssados-item img {
+    width: 190px;
+    height: 190px;
+    border: 3px solid black;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .salgado-container, .salgadoA-container {
+        flex-wrap: wrap; /* Quebra para a linha quando necessário */
+        gap: 30px; /* Menor espaço entre os itens */
+    }
+
+    .salgado-item img, .salgadosAssados-item img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    .salgado-container, .salgadoA-container {
+        gap: 20px; /* Menor espaço */
+    }
+
+    .salgado-item img, .salgadosAssados-item img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .salgado-container, .salgadoA-container {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center; /* Centraliza os itens */
+        gap: 10px; /* Menor espaço */
+    }
+
+    .salgado-item img, .salgadosAssados-item img {
+        width: 120px;
+        height: 120px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+}
+
+ .aviso {
+    color: #ffcc00;
+    font-weight: bold;
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+
+
+ 
+
+    
+    
+    </style>
+
+</head>
+<body>
+    <h2> salgados </h2>
+    <div class ="salgado-container">
+    
+        <div class=" salgado-item " >
+   <img src="coxinha.png" alt="coxinhas"   ;> 
+    <h3>coxinha de frango </h3>
+    </div>
+  
+  <div class="salgado-item" >
+     <img src="risole.png" alt="risole"   ;>
+     <h3>risole </h3>
+  </div>
+   
+   
+   
+     <div class="salgado-item">
+    <img src="bolinho de queijo.png" alt="bolinho de queijo" ;>
+    <h3>bolinho de queijo </h3>
+     </div>
+
+
+   <div class="salgado-item">
+    <img src="bolinho de carne.png" alt="bolinho de carne "  ;>
+    <h3>bolinho de carne </h3>
+</div>
+
+
+   <div class="salgado-item">
+   <img src="kibe.png" alt="kibe"  ;>
+   <h3>kibe </h3> 
+</div>
+  
+
+
+<div class="salgado-item">
+    <img src="bolinho de salsicha.png" alt="bolinho de salsicha"  ;>
+    <h3>bolinho de salsicha </h3>
+   </div>
+
+
+</div>
+
+
+
+
+<main>
+    <h2> salgados Assados </h2>
+    
+    <div class="salgadoA-container">
+
+     <div class=" salgadosAssados-item">
+    <img src="empada.png" alt="empadas">
+    <h3>empada</h3></div>
+   
+   
+    <div class=" salgadosAssados-item">
+    <img src="esfiha.png" alt="esfiha">
+    <h3>esfiha</h3></div>
+
+    <div class=" salgadosAssados-item">
+    <img src="hotdog.png" alt="hotdog">
+    <h3>hot dog</h3></div>
+    
+    
+    <div class=" salgadosAssados-item">
+    <img src="fogazza.png" alt=" fogazza">
+    <h3>fogazza</h3></div>
+    
+    
+    <div class=" salgadosAssados-item">
+      <img src="hamburgue.png"  alt="hamburgue"> 
+    <h3>hamburgue</h3></div>
+
+
+    <div class=" salgadosAssados-item">    
+    <img src="puff.png"
+    " alt="puff">
+    <h3>puff</h3></div>
+    
+    
+
+    </class>
+
+</main>
+
+<footer>
+  <div class="aviso">
+    <h4> ⚠ Atenção: fotos meramente ilustrativas ⚠</h4> 
+  </div>
+
+</footer>
+
+
+
+
+</body>
+</html>

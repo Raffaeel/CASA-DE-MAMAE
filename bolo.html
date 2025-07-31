@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolos</title>
+    <style>
+
+body {
+    background-color: rgb(249, 249, 250);
+}
+
+.bolo-container {
+    display: flex; /* Alinhamento horizontal */
+    gap: 50px; /* Espaço entre os itens */
+    justify-content: center;
+    padding: 3%;
+}
+
+.bolo-item {
+    text-align: center;
+}
+
+.bolo-item img {
+    width: 190px;
+    height: 190px;
+    border: 3px solid black;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .bolo-container {
+        flex-wrap: wrap; /* Quebra para a linha quando necessário */
+        gap: 30px; /* Menor espaço entre os itens */
+    }
+
+    .bolo-item img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bolo-container {
+        gap: 20px; /* Menor espaço */
+    }
+
+    .bolo-item img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bolo-container {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center; /* Centraliza os itens */
+        gap: 10px; /* Menor espaço */
+    }
+
+    .bolo-item img {
+        width: 120px;
+        height: 120px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+}
+
+ .aviso {
+    color: #ffcc00;
+    font-weight: bold;
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+
+        <h2>bolos especiais</h2>
+    <div class =bolo-container>
+    
+    <div class="bolo-item">
+     <img src="bolo de chocolate.png" alt="bolo de  chocolate ">
+     <h3>bolo de chocolate</h3>
+    </div>
+
+    <div class="bolo-item">
+        <img src="chocomorango.png" alt="bolo de  chocolate com morango ">
+        <h3>bolo de chocolate com morango</h3>
+       </div>
+       
+       <div class="bolo-item">
+        <img src="bolo de ameixa com doce de leite.png" alt="bolo de ameixa com doce de leite ">
+        <h3>bolo de ameixa com doce de leite</h3>
+       </div>
+
+       <div class="bolo-item">
+        <img src="bolo de frutas.png" alt="bolo de frutas vermelhas ">
+        <h3>bolo de frutas vermelhas</h3>
+       </div>
+
+       <div class="bolo-item">
+        <img src="bolo de abacaxi.png" alt="bolo de abacaxi ">
+        <h3>bolo de abacaxi</h3>
+       </div>
+
+       <div class="bolo-item">
+        <img src="bolo de prestigio.png" alt="bolo de prestigio ">
+        <h3>bolo de prestigio</h3>
+       </div>
+
+
+
+</div>
+</header>
+
+
+<main>
+<h2>bolos tradicionais</h2>
+    <div class =bolo-container>
+    
+        <div class="bolo-item">
+         <img src="bolo de milho.png" alt="bolo de milho ">
+         <h3>bolo de milho </h3>
+        </div>
+
+
+        <div class="bolo-item">
+            <img src="bolo de laranja.png" alt="bolo de laranja ">
+            <h3>bolo de laranja</h3>
+           </div>
+
+
+           <div class="bolo-item">
+            <img src="bolo de cenoura.png" alt="bolo de cenoura com chocolate ">
+            <h3>bolo de cenoura com chocolate</h3>
+           </div>
+
+
+
+           <div class="bolo-item">
+            <img src="bolo de fuba com goiabada.png" alt="bolo de fubá com goiabada ">
+            <h3>bolo de fubá com goiabada</h3>
+           </div>
+
+
+    </div>       
+
+
+</main>
+
+<footer>
+  <div class="aviso">
+    <h4> ⚠ Atenção: fotos meramente ilustrativas ⚠</h4> 
+  </div>
+
+</footer>
+
+
+</body>
+</html>
