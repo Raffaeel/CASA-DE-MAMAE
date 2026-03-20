@@ -1,0 +1,701 @@
+
+
+
+
+body {
+    background-color: #f9f7f5;
+    margin: 0;
+    padding-top: 150px; /* espaço para o header fixo */
+}
+
+header {
+    width: 100%;
+    height: 150px;
+    background-color: rgb(255, 255, 254);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    max-width: 100%;
+  height: 245px;
+  
+    margin-left: 40px;
+}
+
+.letreiro-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 60px;
+    
+}
+
+/* Remove fundo e estilo padrão dos links */
+.letreiro-container a {
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+    font-weight: bold;
+    
+}
+
+/* Estilo do botão */
+.letreiro-container a {
+    padding: 10px 20px;
+    border: none;
+    background-color: #eda93c;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    
+}
+
+
+
+.btn-carrinho{
+
+ padding: 5px 20px;
+    border: none;
+    background-color: #da8814;
+    cursor: pointer;
+    font-weight: bold;
+
+
+
+
+}
+/*banner*/
+
+
+
+.hero {
+  position: relative;
+  height: 55vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+ 
+}
+
+/*
+   IMAGEM (ATRÁS DA SETA)
+ */
+.hero-image {
+  position: absolute;
+  top: 0;
+
+  /* começa exatamente onde termina a seta */
+  left: 22%;
+  width: 78%;
+  height: 100%;
+
+  z-index: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 
+   BLOCO EM FORMA DE SETA
+ */
+.hero-text {
+  position: relative;
+  width: 22%;              /* ✅ seta menor */
+  height: 75%;
+  background-color: #e6e1d8;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  padding: 80px;
+
+  /* FORMATO DA SETA → */
+  clip-path: polygon(
+    0 0,
+    82% 0,
+    100% 50%,
+    82% 100%,
+    0 100%
+  );
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: #3b2a1e;
+}
+
+/* cards */ 
+.container-cards {
+  padding: 30px 10%;
+  background-color: #f9f7f5 ;
+  text-align: center;
+}
+
+.titulo-cards {
+  color: #d4620bfe;
+  font-size: 26px;
+  margin-bottom: 40px;
+  font-weight: 600;
+
+  margin-left: 5%;
+}
+
+/* LINHA ÚNICA */
+.container-cards {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  flex-wrap: nowrap; /* impede quebrar linha */
+  overflow-x: auto; /* adiciona rolagem se faltar espaço */
+}
+
+/* CARD MENOR */
+.card {
+  min-width: 120px;
+  background: #f9f7f5 ;
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* IMAGEM */
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* TEXTO */
+.card span {
+  padding: 15px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* HOVER SUAVE */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.10);
+}
+footer {
+  background-color: #69635b;
+  margin-top: 180px;
+  padding: 15px 35px;
+}
+
+/* primeira linha */
+.linha-topo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* logo */
+.logo{
+  width: 245px;
+  
+}
+
+/* frase atendimento */
+.atendimento{
+  color: #f7f4f2;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* área instagram + endereço */
+.social{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* instagram */
+.insta{
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* endereço abaixo do instagram */
+.endereco{
+  color: #f7f4f2;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* direitos reservados */
+.direitos{
+  color: #f1b30be9;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+
+/* cardapio */
+.container2-cards {
+  display: flex;
+  flex-wrap: wrap; /* permite quebrar linha se não couber na tela */
+  justify-content: center; /* centraliza os cards */
+  gap: 20px; /* espaço entre os cards */
+  padding: 20px 0;
+}
+
+.card2 {
+  flex: 0 1 180px; /* largura mínima de 180px, cresce se houver espaço */
+  background: #f9f7f5;
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card2 img {
+  width: 100%;
+  height: 120px; /* altura proporcional */
+  object-fit: cover;
+}
+
+.card2 span {
+  padding: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+}
+
+.card2 p {
+  margin: 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.card2 button {
+  margin: 10px 0 15px 0;
+  font-size: 13px;
+  padding: 6px;
+  width: 80%;
+  cursor: pointer;
+}
+
+.card2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+
+
+.controle-quantidade{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.controle-quantidade button{
+  background-color: #e8a03b;
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.controle-quantidade input{
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 26px;
+}
+
+.nota  {
+  text-align: center;
+  margin-top: 20px;
+  color: #3b2a1e;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+#cart-items {
+ text-align: center;
+  margin-top: 20px;
+  color: #080808;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+
+#total {
+  text-align: center;
+  margin-top: 20px;
+  color: #fb0505;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+
+
+ #btnFinalizar {
+    padding: 10px 20px;
+    border: none;
+    background-color: #da8814;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto; /* centraliza horizontalmente */
+}
+#btnFinalizar:hover {
+    background-color: #c77b12;
+}
+
+#clear {
+ 
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto; /* centraliza horizontalmente */
+}
+.avaliacoes{
+
+max-width:900px;
+margin:auto;
+padding:40px 20px;
+
+}
+
+.avaliacoes h2{
+
+text-align:center;
+margin-bottom:30px;
+font-size:24px;
+
+}
+
+.avaliacoes{
+
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+
+}
+
+.carousel{
+
+overflow:hidden;
+position:relative;
+
+}
+
+.carousel-track{
+
+display:flex;
+gap:20px;
+transition:transform 0.5s;
+
+}
+
+.avaliacao-card{
+
+min-width:250px;
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+
+}
+
+.estrelas{
+
+color:#ffb400;
+font-size:18px;
+margin-bottom:8px;
+
+}
+
+.sobre-pedidos{
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #d10f0fdd;
+  border-radius: 10px;
+  color: #e6e1d8;
+}
+
+
+/*resposividade*/
+
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo {
+    height: 150px;
+   width: 150px;
+   
+    margin: 0;
+  }
+
+  .letreiro-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 10px 0;
+  }
+
+  /* BOTÕES MENORES (SEM QUEBRAR DESIGN) */
+  .letreiro-container a {
+    padding: 4px 6px;
+    font-size: 12px;
+  }
+
+  .btn-carrinho {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  body {
+    padding-top: 170px;
+  }
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-text {
+    width: 100%;
+    clip-path: none;
+    padding: 15px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+    left: 0;
+    height: 180px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  /* ✅ CARDS (VOLTA FLEX, MAS ARRUMADO) */
+  .container-cards {
+    flex-wrap: wrap; /* permite quebrar */
+    justify-content: center;
+    gap: 12px;
+    overflow: visible; /* remove scroll lateral */
+  }
+
+  .card {
+    flex: 0 1 calc(25% - 12px); /* 4 por linha */
+    min-width: 70px;
+  }
+
+  .card img {
+    height: 80px;
+  }
+
+  .card span {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  /* 👉 se a tela for menor ainda (celular pequeno) */
+  @media (max-width: 480px) {
+
+    
+    .card {
+      flex: 0 1 calc(50% - 12px); /* 2 por linha */
+    }
+  }
+
+  /* CARDÁPIO */
+  .card2 {
+    flex: 0 1 45%;
+    max-width: 150px;
+  }
+
+  .card2 img {
+    height: 95px;
+  }
+
+  .card2 span {
+    font-size: 13px;
+  }
+
+  .card2 button {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  /* FOOTER */
+  .linha-topo {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+}
+
+/* TABLET */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  header {
+    padding: 10px 20px;
+  }
+
+  .logo {
+    height: auto;
+    max-height: 120px;
+    width: auto;
+  }
+
+  .letreiro-container {
+    gap: 20px;
+  }
+
+  .letreiro-container a {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  body {
+    padding-top: 150px;
+  }
+
+  /* HERO */
+  .hero {
+    height: 45vh;
+  }
+
+  .hero-text {
+    width: 35%;
+    padding: 30px;
+  }
+
+  .hero-image {
+    left: 35%;
+    width: 65%;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  /* CARDS */
+  .container-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card {
+    flex: 0 1 calc(25% - 20px);
+  }
+
+  /* CARDÁPIO */
+  .card2 {
+    flex: 0 1 calc(33.33% - 20px);
+    max-width: 220px;
+  }
+
+}
+
+
+/* DESKTOP */
+@media (min-width: 1441px) {
+
+  header {
+    padding: 20px 80px;
+  }
+
+  .logo {
+    max-height: 160px;
+  }
+
+  .letreiro-container {
+    gap: 40px;
+  }
+
+  .letreiro-container a {
+    padding: 12px 22px;
+    font-size: 16px;
+  }
+
+  /* HERO */
+  .hero {
+    height: 60vh;
+  }
+
+  .hero-text {
+    width: 20%;
+    padding: 70px;
+  }
+
+  .hero-image {
+    left: 20%;
+    width: 80%;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  /* CARDS */
+  .container-cards {
+    gap: 40px;
+  }
+
+  .card {
+    min-width: 160px;
+  }
+
+  /* CARDÁPIO */
+  .card2 {
+    flex: 0 1 calc(20% - 20px);
+    max-width: 280px;
+  }
+.container-cards,
+.container2-cards {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+}

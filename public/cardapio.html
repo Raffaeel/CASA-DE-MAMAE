@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio | Casa de Mamãe</title>
+    <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+    
+<header>
+    <img src="img/logo.webp" alt="logo" class="logo"> 
+    
+    <div class="letreiro-container">
+        <a href="index.html">Início</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="kitfesta.html">Encomendas</a>
+      <a href="carrinho.html" class="btn-carrinho"> 🛒<span id="cart-count">0</span>
+</a>
+    </div>
+</header>
+<br>
+<main>
+
+<h2 class="titulo-cards">Salgados fritos <p>110 gramas</p></h2>
+<section class="container2-cards">
+    
+
+    <div class="card2">
+        <img src="img/coxinha.webp" alt="Coxinha" >
+        <span>Coxinha </span>
+        <span>R$ 7,00</span>
+
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+    </div>
+
+     <button onclick="addToCart(this,'Coxinha',7)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="card2">
+        <img src="img/kibe.webp" alt="Kibe">
+        <span>Kibe</span>
+        <span>R$ 7,00</span>
+        
+           <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'Kibe',7)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="card2">
+        <img src="img/risole.webp" alt="Risoles">
+        <span>Risoles</span>
+        <span>R$ 7,00</span>
+        
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+    </div>
+
+        <button onclick="addToCart(this,'Risoles',7)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="card2">
+        <img src="img/bolinho de carne.webp" alt="Bolinho de Carne">
+        <span>Bolinho de Carne</span>
+        <span>R$ 7,00</span>
+        
+            <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'Bolinho de Carne',7)">Adicionar ao carrinho</button>
+    </div>
+
+      <div class="card2">
+        <img src="img/bolinho de queijo.webp" alt="Bolinho de Queijo">
+        <span>Bolinho de Queijo</span>
+        <span>R$ 7,00</span>
+       
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+    </div>
+
+        <button onclick="addToCart(this,'Bolinho de Queijo',7)">Adicionar ao carrinho</button>
+      </div>
+
+  <div class="card2">
+        <img src="img/bolinho de salsicha.webp" alt="Bolinho de Salsicha">
+        <span>Bolinho de Salsicha</span>
+        <span>R$ 7,00</span>
+       
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'Bolinho de Salsicha',7)">Adicionar ao carrinho</button>
+    </div>
+
+</section>
+
+<h2 class="titulo-cards">Salgados fritos 55 gramas</h2>
+<section class="container2-cards">
+
+ 
+
+    <div class="card2">
+        <img src="img/coxinha.webp" alt="Coxinha" >
+        <span>Coxinha </span>
+        <span>R$ 3,00</span>
+        
+            <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+    </div>
+        <button onclick="addToCart(this,'Coxinha',3)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="card2">
+        <img src="img/kibe.webp" alt="Kibe">
+        <span>Kibe</span>
+        <span>R$ 3,00</span>
+      
+            <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+    </div>
+
+        <button onclick="addToCart(this,'Kibe',3)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="card2">
+        <img src="img/risole.webp" alt="Risoles">
+        <span>Risoles</span>
+        <span>R$ 3,00</span>
+        
+        <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+    </div>
+
+        <button onclick="addToCart(this,'Risoles',3)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="card2">
+        <img src="img/bolinho de carne.webp" alt="Bolinho de Carne">
+        <span>Bolinho de Carne</span>
+        <span>R$ 3,00</span>
+       
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'Bolinho de Carne',3)">Adicionar ao carrinho</button>
+    </div>
+
+      <div class="card2">
+        <img src="img/bolinho de queijo.webp" alt="Bolinho de Queijo">
+        <span>Bolinho de Queijo</span>
+        <span>R$ 3,00</span>
+
+       <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+    </div>
+
+        <button onclick="addToCart(this,'Bolinho de Queijo',3)">Adicionar ao carrinho</button>
+      </div>
+
+  <div class="card2">
+        <img src="img/bolinho de salsicha.webp" alt="Bolinho de Salsicha">
+        <span>Bolinho de Salsicha</span>
+        <span>R$ 3,00</span>
+       
+           <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'Bolinho de Salsicha',3)">Adicionar ao carrinho</button>
+    </div>
+
+
+</section>
+
+
+
+
+<h2 class="titulo-cards">Assados 130 gramas</h2>
+<section class="container2-cards">
+
+ 
+
+    <div class="card2">
+        <img src="img/esfiha.webp" alt="esfiha" >
+        <span>Esfiha</span>
+        <span>R$ 8,00</span>
+       
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'Esfiha',8)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="card2">
+        <img src="img/hamburgue.webp" alt="Hamburguer">
+        <span>Hamburguer</span>
+        <span>R$ 8,00</span>
+      
+            <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+    </div>
+
+        <button onclick="addToCart(this,'Hamburguer',8)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="card2">
+        <img src="img/hotdog.webp" alt="hot dog">
+        <span>Hot Dog</span>
+        <span>R$ 8,00</span>
+       
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'Hot Dog',8)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="card2">
+        <img src="img/empada.webp" alt="Empada">
+        <span>Empada</span>
+        <span>R$ 8,00</span>
+       
+            <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+    </div>
+
+        <button onclick="addToCart(this,'Empada',8)">Adicionar ao carrinho</button>
+    </div>
+
+      <div class="card2">
+        <img src="img/puff.webp" alt="Puff">
+        <span>Puff presunto e queijo</span>
+        <span>R$ 8,00</span>
+        
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+    </div>
+
+        <button onclick="addToCart(this,'Puff',8)">Adicionar ao carrinho</button>
+      </div>
+
+  <div class="card2">
+        <img src="img/madalhao de calabresa.webp" alt="Madalhão de Calabresa">
+        <span>Madalhão de Calabresa</span>
+        <span>R$ 8,00</span>
+       
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+                </div>
+        <button onclick="addToCart(this,'Madalhão de Calabresa',8)">Adicionar ao carrinho</button>
+      </div>
+
+
+</section>
+
+<h2 class="titulo-cards">DOCES </h2>
+<section class="container2-cards">
+
+ 
+
+    <div class="card2">
+        <img src="img/pudin.webp" alt="Pudim" >
+        <span>Pudim 120 gramas</span>
+        <span>R$ 7,00</span>
+       
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'Pudim',7)">Adicionar ao carrinho</button>
+    </div>
+
+  
+ 
+
+    <div class="card2">
+        <img src="img/bolo de chocolate.webp" alt="Bolo de Chocolate">
+        
+        <span>Bolo  de brigadeiro/ fatia</span>
+        <span>R$ 9,00</span>
+       
+           <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'Bolo de brigadeiro fatia',9)">Adicionar ao carrinho</button>
+    </div>
+
+   
+
+</section>
+
+<h2 class="titulo-cards">sucos naturais 200ml </h2>
+<section class="container2-cards">
+
+ 
+
+    <div class="card2">
+        <img src="img/maracuja.webp" alt="SUCO DE MARACUJA" >
+        <span>maracuja</span>
+        <span>R$ 6,00</span>
+       
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'maracuja',6)">Adicionar ao carrinho</button>
+    </div>
+
+  
+ 
+
+    <div class="card2">
+        <img src="img/goiaba.webp" alt="SUCO DE GOIABA">
+        
+        <span>Goiaba</span>
+        <span>R$ 6,00</span>
+       
+           <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'Goiaba',6)">Adicionar ao carrinho</button>
+    </div>
+
+   
+
+      <div class="card2">
+        <img src="img/manga.webp" alt="SUCO DE MANGA">
+        
+        <span>MANGA</span>
+        <span>R$ 6,00</span>
+       
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'MANGA',6)">Adicionar ao carrinho</button>
+    </div>
+
+
+      <div class="card2">
+        <img src="img/abacaxi.webp" alt="SUCO DE ABACAXI">
+        
+        <span>ABACAXI</span>
+        <span>R$ 6,00</span>
+       
+            <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'ABACAXI',6)">Adicionar ao carrinho</button>
+    </div>
+
+ <div class="card2">
+        <img src="img/limao.webp" alt="SUCO DE LIMÃO">
+        
+        <span>limão</span>
+        <span>R$ 6,00</span>
+       
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'limão',6)">Adicionar ao carrinho</button>
+    </div>
+
+     <div class="card2">
+        <img src="img/laranja.webp" alt="SUCO DE LARANJA">
+        
+        <span>laranja</span>
+        <span>R$ 8,00</span>
+       
+        <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,' suco de laranja',8)">Adicionar ao carrinho</button>
+    </div>
+
+</section>
+
+
+<h2 class="titulo-cards">Bolos tradicionais </h2>
+<section class="container2-cards">
+ 
+
+    <div class="card2">
+        <img src="img/bolo de cenoura.webp" alt="Bolo de Cenoura">
+        <span>Bolo de Cenoura</span>
+        <span>R$ 35,00</span>
+       
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'Bolo de Cenoura',35)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="card2">
+        <img src="img/bolo de fuba com goiabada.webp" alt="Bolo de Fuba com Goiabada">
+        <span>Bolo de Fuba com Goiabada</span>
+        <span>R$ 35,00</span>
+
+        <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+    </div>
+
+        <button onclick="addToCart(this,'Bolo de Fuba com Goiabada',35)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="card2">
+        <img src="img/bolo de laranja.webp" alt="Bolo de Laranja">
+        <span>Bolo de Laranja</span>
+        <span>R$ 35,00</span>
+       
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'Bolo de Laranja',35)">Adicionar ao carrinho</button>
+    </div>
+
+
+  <div class="card2">
+        <img src="img/bolo de milho.webp" alt="Bolo de milho">
+        <span>Bolo de milho</span>
+        <span>R$ 35,00</span>
+       
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+                </div>
+        <button onclick="addToCart(this,'Bolo de milho',35)">Adicionar ao carrinho</button>
+    </div>
+
+ 
+</section>
+
+
+
+
+
+
+</section>
+
+<h2 class="titulo-cards">Bolos para festa</h2>
+<section class="container2-cards">
+
+ 
+
+
+    <div class="card2">
+        <img src="img/bolo de abacaxi.webp" alt="Bolo de Abacaxi">
+        <span>Bolo de Abacaxi</span>
+        <span>R$ 85,00</span>
+       
+           <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'Bolo de Abacaxi',3)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="card2">
+        <img src="img/bolo de ameixa com doce de leite.webp" alt="Bolo de Ameixa com Doce de Leite">
+        <span>Bolo de Ameixa </span>
+        <span>R$ 85,00</span>
+
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+      </div>
+
+        <button onclick="addToCart(this,'Bolo de Ameixa com Doce de Leite',85)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="card2">
+        <img src="img/bolo de frutas.webp" alt="Bolo de Frutas">
+        <span>Bolo de tropical</span>
+        <span>R$ 85,00</span>
+
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+       </div>
+
+        <button onclick="addToCart(this,'Bolo de Frutas',85)">Adicionar ao carrinho</button>
+    </div>
+
+    
+
+  <div class="card2">
+        <img src="img/Captura de tela 2024-07-29 192759.webp" alt="Bolo de frutas vermelhas">
+        <span>Bolo de frutas vermelhas</span>
+        <span>R$ 95,00</span>
+       
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+            </div>
+        <button onclick="addToCart(this,'Bolo de frutas vermelhas',95)">Adicionar ao carrinho</button>
+    </div>
+
+ <div class="card2">
+        <img src="img/chocomorango.webp" alt="Bolo de frutas vermelhas">
+        <span>Bolo de chocomorango</span>
+        <span>R$ 95,00</span>
+       
+          <div class="controle-quantidade">
+        <button onclick="alterarQuantidade(this,-1)">-</button>
+        <input type="text" class="quantidade" value="1" readonly>
+        <button onclick="alterarQuantidade(this,1)">+</button>
+              </div>
+
+        <button onclick="addToCart(this,'Bolo de chocomorango',95)">Adicionar ao carrinho</button>
+    </div>
+</section>
+</main>
+
+
+<footer>
+
+<div class="linha-topo">
+
+<img src="img/logo.webp" class="logo" alt="logo">
+
+<p class="atendimento">
+Atendemos de terça a sábado das 9h às 18h
+</p>
+
+<div class="social">
+
+<a href="https://www.instagram.com/seuinstagram" target="_blank">
+<img src="img/insta.webp.png" class="insta" alt="instagram">
+</a>
+
+<p class="endereco">
+Rua Florianópolis 365 – Gaivotas – Litoral<br>
+São Paulo - SP 
+</p alt="endereço">
+
+</div>
+
+</div>
+
+<p class="direitos" alt="direitos autorais">
+© 1998 Casa de Mamãe. Todos os direitos reservados.
+</p>
+
+</footer>
+
+  
+
+<script src="cart.js"></script>
+
+</body>
+</html>

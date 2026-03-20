@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login|casa de mamãe </title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+
+    /* Fundo escurecido */
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("img/banner.webp") ;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Título */
+h1 {
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Formulário estilo vidro */
+form {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    padding: 35px;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: white;
+    font-weight: 500;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+
+    border-radius: 6px;
+    border: none;
+
+    outline: none;
+}
+
+/* Botão */
+button {
+    width: 100%;
+    background-color: #df8927;
+    color: white;
+
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #f29736;
+    transform: translateY(-2px);
+}
+    </style>
+</head>
+<body>
+    <h1>Faça seu login</h1>
+
+<div class="container">
+
+    <!---- LOGIN -->
+    <form id="loginForm" action="/login" method="post">
+        <label>Usuário:</label>
+        <input type="text" name="username" required><br><br>
+
+        <label>Senha:</label>
+        <input type="password" name="password" required><br><br>
+
+        <button type="submit">Entrar</button><br><br>
+
+        <button type="button" id="registerButton">Cadastro</button>
+    </form>
+
+    <!--  CADASTRO -->
+    <form id="registerForm" action="/cadastro" method="post" style="display: none;">
+        <label>Usuário:</label>
+        <input type="text" name="username" required><br><br>
+
+        <label>Telefone:</label>
+        <input type="text" name="fone" required><br><br>
+
+        <label>CEP:</label>
+        <input type="text" name="cep" required><br><br>
+
+        <label>Endereço:</label>
+        <input type="text" name="endereco" required><br><br>
+
+        <label>Senha:</label>
+        <input type="password" name="password" required><br><br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+</div>
+
+<script>
+   const registerForm = document.getElementById("registerForm");
+const loginForm = document.getElementById("loginForm");
+const registerButton = document.getElementById("registerButton");
+
+
+// Mostrar cadastro
+registerButton.addEventListener("click", () => {
+    loginForm.style.display = "none";
+    registerForm.style.display = "block";
+});
+
+
+// Cadastro
+registerForm.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(registerForm);
+
+    const data = {
+        username: formData.get("username"),
+        fone: formData.get("fone"),
+        cep: formData.get("cep"),
+        endereco: formData.get("endereco"),
+        password: formData.get("password")
+    };
+
+    const response = await fetch("http://localhost:3000/cadastro", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+    alert(result.message);
+
+    if (response.ok) {
+        registerForm.reset();
+        registerForm.style.display = "none";
+        loginForm.style.display = "block";
+    }
+});
+// Login
+loginForm.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(loginForm);
+
+    const data = {
+        username: formData.get("username"),
+        password: formData.get("password")
+    };
+
+    const response = await fetch("http://localhost:3000/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+
+        // Salva token
+        localStorage.setItem("token", result.token);
+
+        // Salva dados do usuário
+        localStorage.setItem("user", JSON.stringify(result.user));
+
+        alert("Login realizado com sucesso");
+
+        window.location.href = "index.html";
+
+    } else {
+        alert(result.message);
+    }
+});
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrinho</title>
+    <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+<header>
+    <img src="img/logo.webp" alt="logo" class="logo">
+
+    <div class="letreiro-container">
+        <a href="index.html">Início</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="kitfesta.html">Encomendas</a>
+    </div>
+</header>
+
+<main>
+<div class="nota">
+    <h1>Seu Carrinho</h1>
+</div>
+
+<!-- container onde os itens do carrinho serão renderizados -->
+<div id="cart-items"></div>
+
+<!-- total do carrinho -->
+<h3 id="total"></h3>
+
+
+<!-- botão para enviar pedido -->
+<button id="btnFinalizar">Enviar Pedido</button>
+
+<!-- botão para limpar todo o carrinho -->
+<button id="clear" onclick="limparCarrinho()">Limpar Carrinho</button>
+
+
+</div>
+</main>
+    
+
+  <footer>
+
+<div class="linha-topo">
+
+<img src="img/logo.webp" class="logo" alt="logo">
+
+<p class="atendimento">
+Atendemos de terça a sábado das 9h às 18h
+</p>
+
+<div class="social">
+
+<a href="https://www.instagram.com/seuinstagram" target="_blank">
+<img src="img/insta.webp.png" class="insta" alt="instagram">
+</a>
+
+<p class="endereco">
+Rua Florianópolis 365 – Gaivotas – Litoral<br>
+São Paulo - SP 
+</p alt="endereço">
+
+</div>
+
+</div>
+
+<p class="direitos" alt="direitos autorais">
+© 1998 Casa de Mamãe. Todos os direitos reservados.
+</p>
+
+</footer>
+    
+
+
+<script src="carrinho.js"></script>
+</body>
+</html>
