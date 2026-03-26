@@ -5,93 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login|casa de mamãe </title>
     <style>
-    body {
-    font-family: Arial, sans-serif;
+ body {
+margin: 0;
+font-family: Arial, sans-serif;
 
-    /* Fundo escurecido */
-    background:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-        url("img/banner.webp") ;
+background:  
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),  
+    url("img/banner.webp");  
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-size: cover;  
+  background-position: center;  
+  background-repeat: no-repeat;  
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-}
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
 
-/* Título */
-h1 {
-    color: white;
-    margin-bottom: 25px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
+  min-height: 100dvh;  
+  padding: 20px;  
+}  
 
-/* Container */
-.container {
-    width: 100%;
-    max-width: 400px;
-}
+h1 {  
+  color: white;  
+  margin-bottom: 20px;  
+  text-align: center;  
+}  
 
-/* Formulário estilo vidro */
+.container {  
+  width: 100%;  
+  max-width: 400px;  
+}  
+
 form {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 4px; 
 
-    padding: 35px;
-    border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  padding: 28px;
+  border-radius: 12px;
 
-    border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 48px;
 }
 
-/* Labels */
-label {
-    display: block;
-    margin-bottom: 6px;
-    color: white;
-    font-weight: 500;
-}
+label {  
+ 
+  margin: 0px;  
+  color: white;  
+  font-weight: 500;  
+ 
+}  
 
-/* Inputs */
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 18px;
+input {  
+  width: 100%;  
+  padding: 8px;  
+   
 
-    border-radius: 6px;
-    border: none;
+  border-radius: 6px;  
+  border: none;  
 
-    outline: none;
-}
+  font-size: 16px;  
+  outline: none;  
+  box-sizing: border-box;
+}  
 
-/* Botão */
-button {
-    width: 100%;
-    background-color: #df8927;
-    color: white;
+button {  
+  width: 100%;  
+  background-color: #df8927;  
+  color: white;  
 
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
+  padding: 10px;  
+  border: none;  
+  border-radius: 6px;  
 
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
+  font-weight: bold;  
+  font-size: 16px;  
 
-button:hover {
-    background-color: #f29736;
-    transform: translateY(-2px);
+  cursor: pointer;  
+  transition: 0.3s ease;  
+  box-sizing: border-box;
+}  
+
+button:hover {  
+  background-color: #f29736;  
+  transform: translateY(-2px);  
+}  
+
+/* 📱 Mobile */  
+@media (max-width: 480px) {  
+  h1 {  
+    font-size: 22px;  
+     margin-top: 48px;
+  }  
+
+  form {  
+    padding: 25px;  
+    margin-top: 48px;
+  }  
 }
     </style>
 </head>
