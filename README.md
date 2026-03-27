@@ -3,6 +3,8 @@
 Sistema web desenvolvido para um negócio real, com foco em facilitar pedidos online e automatizar o atendimento via WhatsApp.
 
 ---
+## sistema mvp 
+situação teste 
 
 ## 🚀 Demonstração
 
@@ -54,6 +56,7 @@ O **Casa de Mamãe** resolve esse problema oferecendo um sistema simples e autom
 - 🔍 SEO: 100
 
 ---
-
+## MELHORIAS FUTURAS
+-Banco de dados 
 
 ## desenvolvido por :RAFAEL BORGES :https://raffaeel.github.io/BORGES/
