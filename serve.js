@@ -11,7 +11,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(cors());
-app.use(express.static(path.join(__dirname, 'public' )));
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'login.html'));
+});
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
@@ -20,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/', userRoutes);
 app.use("/orders", orderRoute);
-
+app.use(express.static(path.join(__dirname, 'public', )));
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {

@@ -1,4 +1,3 @@
-
 const cartContainer = document.getElementById("cart-items");
 const totalElement = document.getElementById("total");
 
@@ -47,56 +46,68 @@ function finalizarPedido() {
         return;
     }
 
-    //  Calcula o total 
+    // Calcula o total 
     let total = cart.reduce((acc, item) => {
         const price = Number(item.price);
         const quantity = Number(item.quantity);
         return acc + (price * quantity);
     }, 0);
 
-    fetch("http://localhost:3000/orders", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            orderItems: cart,
-            user: user,
-            total: total
+    // 📍 NOVO: pegar localização antes do fetch
+    navigator.geolocation.getCurrentPosition((pos) => {
+
+        fetch("http://localhost:3000/orders", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                orderItems: cart,
+                user: user,
+                total: total,
+                lat: pos.coords.latitude,
+                lng: pos.coords.longitude // 🔥 corrigido
+            })
         })
-    })
-    .then(async response => {
+        .then(async response => {
 
-        if (!response.ok) {
-            const text = await response.text();
-            console.log("Erro do servidor:", text);
-            throw new Error("Erro no servidor");
-        }
+            if (!response.ok) {
+                const data = await response.json();
+                alert(data.erro);
+                return;
+            }
 
-        return response.json();
-    })
-    .then(data => {
+            return response.json();
+        })
+        .then(data => {
 
-        localStorage.removeItem("cart");
-        window.location.href = data.whatsappUrl;
-    })
-    .catch(error => {
-        console.error("Erro:", error);
-        alert("Erro ao enviar pedido. Veja o console.");
+            if (!data) return;
+
+            localStorage.removeItem("cart");
+            window.location.href = data.whatsappUrl;
+        })
+        .catch(error => {
+            console.error("Erro:", error);
+            alert("Erro ao enviar pedido. Veja o console.");
+        });
+
+    }, () => {
+        alert("Precisamos da sua localização para continuar 📍");
+        
     });
-}document.getElementById("btnFinalizar") .addEventListener("click", finalizarPedido);
+}
 
-
+document.getElementById("btnFinalizar").addEventListener("click", finalizarPedido);
 
 document.getElementById("btnLimpar").addEventListener("click", limparCarrinho);
 
-
 function limparCarrinho() {
-    localStorage.removeItem("cart");  // remove todo o carrinho
-    cart = [];                        // limpa a variável local
-    renderCart();                      // atualiza a tela
-     updateCartCount(); 
+    localStorage.removeItem("cart");
+    cart = [];
+    renderCart();
+    updateCartCount(); 
 }
+
 document.addEventListener("DOMContentLoaded", () => {
     updateCartCount();
 });
