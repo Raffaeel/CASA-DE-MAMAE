@@ -1,18 +1,5 @@
 [
   {
-    "id": "1772587605089",
-    "username": "teste",
-    "fone": "41811406",
-    "cep": "063534680",
-    "endereco": "rua dumont 23",
-    "password": "$2b$10$gqQOIvH4CCV3cxjuyVCh7OcWuRdm8FJaJ3ese5sIa6mGL51OZTtdC"
-  },
-  {
-    "id": "1774915505482",
-    "username": "rafael",
-    "fone": "1196534680",
-    "cep": "06396200",
-    "endereco": "rua dumont",
-    "password": "$2b$10$4uxLoFZ.X6t/zQH0cBpMZ.purMdhxTWfH7CTt/avHWZpA1M7Qt51O"
   }
+  
 ]

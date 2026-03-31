@@ -17,27 +17,50 @@
 </header>
 
 <main>
+
 <div class="nota">
     <h1>Seu Carrinho</h1>
 </div>
 
-<!-- container onde os itens do carrinho serão renderizados -->
 <div id="cart-items"></div>
 
-<!-- total do carrinho -->
+<!-- ENTREGA -->
+<h3>Entrega</h3>
+<label>
+    <input type="radio" name="entrega" value="Entrega">
+    Entrega
+</label>
+
+<label>
+    <input type="radio" name="entrega" value="Retirada">
+    Retirada
+</label>
+
+<!-- PAGAMENTO -->
+<h3>Pagamento</h3>
+<label>
+    <input type="radio" name="pagamento" value="Débito">
+    Débito
+</label>
+
+<label>
+    <input type="radio" name="pagamento" value="Crédito">
+    Crédito
+</label>
+
+<label>
+    <input type="radio" name="pagamento" value="Pix">
+    Pix
+</label>
+
 <h3 id="total"></h3>
 
-
-<!-- botão para enviar pedido -->
 <button id="btnFinalizar">Enviar Pedido</button>
 
-<!-- botão para limpar todo o carrinho -->
 <button id="clear" onclick="limparCarrinho()">Limpar Carrinho</button>
 
-
-</div>
 </main>
-    
+
 
   <footer>
 

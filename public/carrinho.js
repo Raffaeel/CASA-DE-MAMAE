@@ -4,6 +4,25 @@ const totalElement = document.getElementById("total");
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let user = JSON.parse(localStorage.getItem("user"));
 
+// ✅ ADICIONADO (não altera nada existente)
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const totalItens = cart.reduce((acc, item) => acc + item.quantity, 0);
+
+    const contador = document.getElementById("cart-count");
+
+    if (contador) {
+        contador.innerText = totalItens;
+    }
+}
+
+// ✅ pegar opção selecionada (radio)
+function pegarOpcaoSelecionada(nome) {
+    const opcao = document.querySelector(`input[name="${nome}"]:checked`);
+    return opcao ? opcao.value : null;
+}
+
 function renderCart() {
 
     cartContainer.innerHTML = "";
@@ -46,14 +65,21 @@ function finalizarPedido() {
         return;
     }
 
-    // Calcula o total 
+    // ✅ já estava certo (não mexi)
+    const entrega = pegarOpcaoSelecionada("entrega");
+    const pagamento = pegarOpcaoSelecionada("pagamento");
+
+    if (!entrega || !pagamento) {
+        alert("Escolha entrega e forma de pagamento.");
+        return;
+    }
+
     let total = cart.reduce((acc, item) => {
         const price = Number(item.price);
         const quantity = Number(item.quantity);
         return acc + (price * quantity);
     }, 0);
 
-    // 📍 NOVO: pegar localização antes do fetch
     navigator.geolocation.getCurrentPosition((pos) => {
 
         fetch("/orders", {
@@ -65,8 +91,10 @@ function finalizarPedido() {
                 orderItems: cart,
                 user: user,
                 total: total,
+                entrega: entrega,
+                pagamento: pagamento,
                 lat: pos.coords.latitude,
-                lng: pos.coords.longitude // 🔥 corrigido
+                lng: pos.coords.longitude
             })
         })
         .then(async response => {
@@ -84,30 +112,37 @@ function finalizarPedido() {
             if (!data) return;
 
             localStorage.removeItem("cart");
+
             window.location.href = data.whatsappUrl;
         })
         .catch(error => {
             console.error("Erro:", error);
-            alert("Erro ao enviar pedido. Veja o console.");
+            alert("Erro ao enviar pedido.");
         });
 
     }, () => {
         alert("Precisamos da sua localização para continuar 📍");
-        
     });
 }
 
+// botão finalizar
 document.getElementById("btnFinalizar").addEventListener("click", finalizarPedido);
 
-document.getElementById("btnLimpar").addEventListener("click", limparCarrinho);
-
+// limpar carrinho
 function limparCarrinho() {
     localStorage.removeItem("cart");
     cart = [];
     renderCart();
-    updateCartCount(); 
+    updateCartCount(); // já existia → mantido
 }
 
+// botão limpar
+const btnLimpar = document.getElementById("btnLimpar");
+if (btnLimpar) {
+    btnLimpar.addEventListener("click", limparCarrinho);
+}
+
+// carregar contador
 document.addEventListener("DOMContentLoaded", () => {
-    updateCartCount();
+    updateCartCount(); // já existia → mantido
 });

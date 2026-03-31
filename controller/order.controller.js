@@ -9,7 +9,8 @@ const loja = {
 
 export const createOrder = (req, res) => {
   try {
-    const { orderItems, user, total, lat, lng } = req.body;
+    // 🔥 NOVO: entrega e pagamento
+    const { orderItems, user, total, lat, lng, entrega, pagamento } = req.body;
 
     // valida se veio localização
     if (!lat || !lng) {
@@ -18,28 +19,28 @@ export const createOrder = (req, res) => {
       });
     }
 
-    //  calcula distância
+    // calcula distância
     const distancia = calcularDistancia(
       lat,
       lng,
       loja.lat,
       loja.lng
     );
-   
 
-    // BLOQUEIO 3KM
-    if (distancia > 3) {
+    // 🔥 BLOQUEIO SOMENTE PARA ENTREGA
+    if (distancia > 3 && entrega === "Entrega") {
       return res.status(403).json({
-        erro: `Fora da área de entrega , atendemos no máximo (3km) das loja . Você está a ${distancia.toFixed(2)} km 🚫`
+        erro: `Fora da área de entrega, atendemos no máximo (3km). Você está a ${distancia.toFixed(2)} km 🚫`
       });
     }
 
-
-    //  fluxo normal
+    // fluxo normal (agora com entrega e pagamento)
     const message = createWhatsAppMessage({
       orderItems,
       user,
-      total
+      total,
+      entrega,
+      pagamento
     });
 
     const phoneNumber = "5513996792155";
