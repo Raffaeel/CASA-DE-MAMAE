@@ -56,7 +56,7 @@ function finalizarPedido() {
     // 📍 NOVO: pegar localização antes do fetch
     navigator.geolocation.getCurrentPosition((pos) => {
 
-        fetch("http://localhost:3000/orders", {
+        fetch("/orders", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
