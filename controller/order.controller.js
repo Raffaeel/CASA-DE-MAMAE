@@ -1,7 +1,6 @@
 import { createWhatsAppMessage } from "../utils/gerarMensagen.js";
 import { calcularDistancia } from "../services/distance.services.js";
 
-// 📍 coordenada da sua loja (ajusta depois)
 const loja = {
   lat: -24.239939,
   lng: -46.894231
@@ -27,7 +26,7 @@ export const createOrder = (req, res) => {
       loja.lng
     );
 
-    // 🔥 BLOQUEIO SOMENTE PARA ENTREGA
+    //  BLOQUEIO 
     if (distancia > 3) {
       return res.status(403).json({
         erro: `Fora da área de entrega, atendemos no máximo (3km). Você está a ${distancia.toFixed(2)} km 🚫`

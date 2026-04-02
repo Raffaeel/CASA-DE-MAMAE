@@ -6,7 +6,7 @@ export function createWhatsAppMessage({ orderItems, user, total, entrega, pagame
     message += `📞 Telefone: ${user.fone}\n`;
     message += `📍 Endereço: ${user.endereco}\n\n`;
 
-    message += `📦 Itens do pedido:\n`;
+    message += `🍔 Itens do pedido:\n`;
 
     orderItems.forEach(item => {
         const subtotal = item.price * item.quantity;
@@ -17,7 +17,7 @@ export function createWhatsAppMessage({ orderItems, user, total, entrega, pagame
     message += `\n💰 Total: R$ ${Number(total).toFixed(2)}\n`;
 
     // 🔥 NOVO (ESSENCIAL)
-    message += `\n🚚 Entrega: ${entrega}`;
+    message += `\n🛵 Entrega: ${entrega}`;
     message += `\n💳 Pagamento: ${pagamento}`;
 
     return message;

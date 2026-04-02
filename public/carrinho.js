@@ -4,7 +4,7 @@ const totalElement = document.getElementById("total");
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let user = JSON.parse(localStorage.getItem("user"));
 
-// ✅ ADICIONADO (não altera nada existente)
+
 function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -65,7 +65,7 @@ function finalizarPedido() {
         return;
     }
 
-    // ✅ já estava certo (não mexi)
+    
     const entrega = pegarOpcaoSelecionada("entrega");
     const pagamento = pegarOpcaoSelecionada("pagamento");
 
@@ -133,7 +133,7 @@ function limparCarrinho() {
     localStorage.removeItem("cart");
     cart = [];
     renderCart();
-    updateCartCount(); // já existia → mantido
+    updateCartCount(); 
 }
 
 // botão limpar
@@ -144,5 +144,5 @@ if (btnLimpar) {
 
 // carregar contador
 document.addEventListener("DOMContentLoaded", () => {
-    updateCartCount(); // já existia → mantido
+    updateCartCount(); 
 });
