@@ -28,7 +28,7 @@ export const createOrder = (req, res) => {
     );
 
     // 🔥 BLOQUEIO SOMENTE PARA ENTREGA
-    if (distancia > 3 && entrega === "Entrega") {
+    if (distancia > 3) {
       return res.status(403).json({
         erro: `Fora da área de entrega, atendemos no máximo (3km). Você está a ${distancia.toFixed(2)} km 🚫`
       });

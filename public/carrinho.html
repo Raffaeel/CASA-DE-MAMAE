@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho</title>
     <link rel="stylesheet" href="stile.css">
 </head>
@@ -18,47 +19,60 @@
 
 <main>
 
-<div class="nota">
-    <h1>Seu Carrinho</h1>
+<div class="container">
+
+  <div class="card">
+
+    <div class="nota">
+      <h1>Seu Carrinho</h1>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="section">
+      <h3>Entrega</h3>
+
+      <label>
+        <input type="radio" name="entrega" value="Entrega">
+        Entrega
+      </label>
+
+      <label>
+        <input type="radio" name="entrega" value="Retirada">
+        Retirada
+      </label>
+    </div>
+
+    <div class="section">
+      <h3>Pagamento</h3>
+
+      <label>
+        <input type="radio" name="pagamento" value="Débito">
+        Débito
+      </label>
+
+      <label>
+        <input type="radio" name="pagamento" value="Crédito">
+        Crédito
+      </label>
+
+      <label>
+        <input type="radio" name="pagamento" value="Pix">
+        Pix
+      </label>
+    </div>
+
+    <h3 id="total"></h3>
+
+    <button id="btnFinalizar">Enviar Pedido</button>
+
+    <button id="clear" onclick="limparCarrinho()">
+      Limpar Carrinho
+    </button>
+
+  </div>
+
 </div>
-
-<div id="cart-items"></div>
-
-<!-- ENTREGA -->
-<h3>Entrega</h3>
-<label>
-    <input type="radio" name="entrega" value="Entrega">
-    Entrega
-</label>
-
-<label>
-    <input type="radio" name="entrega" value="Retirada">
-    Retirada
-</label>
-
-<!-- PAGAMENTO -->
-<h3>Pagamento</h3>
-<label>
-    <input type="radio" name="pagamento" value="Débito">
-    Débito
-</label>
-
-<label>
-    <input type="radio" name="pagamento" value="Crédito">
-    Crédito
-</label>
-
-<label>
-    <input type="radio" name="pagamento" value="Pix">
-    Pix
-</label>
-
-<h3 id="total"></h3>
-
-<button id="btnFinalizar">Enviar Pedido</button>
-
-<button id="clear" onclick="limparCarrinho()">Limpar Carrinho</button>
-
 </main>
 
 

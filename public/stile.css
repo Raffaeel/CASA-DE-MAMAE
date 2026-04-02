@@ -333,29 +333,39 @@ footer {
   height: 26px;
 }
 
-.nota  {
-  text-align: center;
-  margin-top: 20px;
-  color: #3b2a1e;
-  font-size: 28px;
-  font-weight: 600;
+/* container central */
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 15px;
 }
 
-#cart-items {
- text-align: center;
-  margin-top: 20px;
-  color: #080808;
-  font-size: 19px;
-  font-weight: 600;
+/* card branco */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
+/* seções */
+.section {
+  margin-top: 20px;
+}
 
+/* alinhar radios melhor */
+.section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* total */
 #total {
   text-align: center;
-  margin-top: 20px;
-  color: #fb0505;
+  margin: 20px 0;
+  color: red;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 
